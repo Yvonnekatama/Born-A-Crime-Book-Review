@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+    function grat(){
+        var input=document.getElementById("user-ipt")
+        if(input.value==""||input.value==null){
+            alert("Please input a review")
+            return (false);
+
+        }else{
+            alert("Thank you for your response")
+            return (true);
+        }
+          }
+    </script>
+<title>Book review</title>
+</head>
+<body>
+    <h1 id="head1">Share your thoughts...</h1>
+    <form method="POST" action="https://api.apispreadsheets.com/data/12962/" onsubmit="return grat()">
+        <label id="lbl" for=label for="user-review"></label>
+        <input name="Reviews" id="user-ipt">
+       <button type="submit" id="sub" onclick="grat()">Submit</button>
+    </form>
+
+    
+</body>
+</html>
